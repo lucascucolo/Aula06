@@ -38,4 +38,14 @@ public class GerenciaFunc {
         }
         return saida;
     }
+
+    public boolean removerFuncionario(String nome){
+        for (Funcionario funcionario : funcionarios) {
+            if(funcionario.getNome().equals(nome)){
+                funcionarios.remove(funcionario);
+            }
+            return true;
+        }
+        return false;
+    }
 }
