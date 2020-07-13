@@ -1,19 +1,24 @@
 package exercicios;
 public class Senior extends Funcionarios {
     
-    double horaBonus;
+    private double bonus;
 
-    public Senior(String nome,int pagHora,int horaTrabalho,double horaBonus) {
+    public Senior(String nome,int pagHora,int horaTrabalho,double bonus) {
         super(nome,horaTrabalho,pagHora);
-        this.horaBonus = horaBonus;
+        this.bonus = bonus;
     }
-    public double getHoraBonus() {
-        return horaBonus;
+    public double getBonus() {
+        return this.bonus;
     }
     @Override
     public double Salario(){
-        this.horaBonus=(super.Salario()/10)*getHoraBonus();
-        return super.Salario()+this.horaBonus;
+        double salario;
+        if(getHoraTrabalho()>=10){
+        salario=(super.Salario())+(super.Salario()*getBonus());
+        }else{
+        salario=super.Salario();
+        }
+        return salario;
     }
 
 }

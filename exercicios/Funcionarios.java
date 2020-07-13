@@ -1,9 +1,8 @@
 package exercicios;
 
 public class Funcionarios {
-    String nome;
-    double salario;
-    int horaTrabalho,pagHora;
+    private String nome;
+    private int horaTrabalho,pagHora;
     
     public Funcionarios(String nome, int pagHora, int horaTrabalho) {
         this.nome = nome;
@@ -41,6 +40,6 @@ public class Funcionarios {
     }
 
     public String Imprimir(){
-        return "Funcionario "+getNome()+ " receberá "+Salario();
+        return "Funcionario "+getNome()+ " receberá "+ Salario();
     }
 }
