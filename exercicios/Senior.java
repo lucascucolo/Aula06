@@ -4,7 +4,7 @@ public class Senior extends Funcionarios {
     private double bonus;
 
     public Senior(String nome,int pagHora,int horaTrabalho,double bonus) {
-        super(nome,horaTrabalho,pagHora);
+        super(nome,pagHora,horaTrabalho);
         this.bonus = bonus;
     }
     public double getBonus() {
