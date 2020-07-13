@@ -29,7 +29,7 @@ public class AppAnimalProprietario {
                 System.out.println("qual o telefone do proprietario?");
                 numTelefone=in.nextInt();
                 animal.addAnimal(nomeAnimal, raca, nomeProprietario,numTelefone);
-                System.out.println("===> Animal Cadastrado");
+                System.out.println("===> Animal Cadastrado \n");
                     break;
                 case 2:
                 System.out.println("qual o nome do Animal vc quer remover?");
