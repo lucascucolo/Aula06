@@ -1,6 +1,7 @@
 package exercicio06;
 
 public class ContaCorrente extends Conta {
+    private static double taxaCC=0.1;
 
     ContaCorrente(int numConta) {
         super(numConta);
@@ -18,10 +19,14 @@ public class ContaCorrente extends Conta {
     @Override
     public boolean Depositar(double deposito) {
         if (deposito > 0) {
-            saldoConta+= deposito;
+            saldoConta+= deposito-taxaCC;
             return true;
         }
         return false;
+    }
+
+    public String getTipoConta(){
+        return "Conta Corrente";
     }
     
 }

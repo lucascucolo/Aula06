@@ -10,7 +10,7 @@ public class ContaEspecial extends Conta {
     }
 
     public boolean Sacar(double saque) {
-        if (saque > 0 && super.getSaldoConta() > 0 && limite > saque) {
+        if (saque > 0 && (super.getSaldoConta() > ((-1)*limite)) && limite > saque) {
             saldoConta -= saque;
             return true;
         }
@@ -26,6 +26,9 @@ public class ContaEspecial extends Conta {
         return false;
     }
 
+    public String getTipoConta(){
+        return "Conta Especial";
+    }
 
 
 }
